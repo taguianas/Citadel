@@ -18,23 +18,28 @@ Each Maester process acts as the local agent of a realm  reading its configurati
 
 ```
 OS_Project_citadel/
+├── README.md
 └── Phase1/
-    ├── main.c                   # Entry point: arg parsing, signal setup, command loop
-    ├── main.h
-    ├── globals.h                # Shared constants, system includes, struct definitions
-    ├── io_utils.c               # I/O utilities (read/write syscalls only — no printf/scanf)
-    ├── io_utils.h
-    ├── config.c                 # maester.dat parser
-    ├── config.h
-    ├── inventory.c              # stock.db binary reader
-    ├── inventory.h
-    ├── commands.c               # Command parser and dispatcher
-    ├── commands.h
-    ├── Makefile
-    ├── maester.dat              # Sample configuration file
-    ├── stock.db                 # Sample binary inventory database
-    ├── Gx_F1.tar                # Phase 1 submission archive
-    └── Phase1_Design_Report.pdf # Full design and implementation report
+    ├── Phase1_Design_Report.pdf         # Full design and implementation report
+    └── Files/
+        ├── main.c                       # Entry point: arg parsing, signal setup, command loop
+        ├── main.h
+        ├── globals.h                    # Shared constants, system includes, struct definitions
+        ├── io_utils.c                   # I/O utilities (read/write syscalls only — no printf/scanf)
+        ├── io_utils.h
+        ├── config.c                     # maester.dat parser
+        ├── config.h
+        ├── inventory.c                  # stock.db binary reader
+        ├── inventory.h
+        ├── commands.c                   # Command parser and dispatcher
+        ├── commands.h
+        ├── Makefile
+        ├── maester.dat                  # Sample configuration file
+        ├── stock.db                     # Sample binary inventory database
+        ├── Gx_F1.tar                    # Phase 1 submission archive
+        ├── gitignore
+        └── dragonmont/                  # Maester working directory (trade files output)
+            └── gitkeep
 ```
 
 ---
@@ -50,7 +55,7 @@ OS_Project_citadel/
 ### Compilation
 
 ```bash
-cd Phase1
+cd Phase1/Files
 make
 ```
 
@@ -65,6 +70,7 @@ The Makefile uses strict flags: `-Wall -Wextra -Werror -pedantic`. The build pro
 **Example:**
 
 ```bash
+cd Phase1/Files
 ./Maester maester.dat stock.db
 ```
 
@@ -85,7 +91,7 @@ make clean
 
 ## File Formats
 
-### `maester.dat` — Configuration File (plain text)
+### `maester.dat` : Configuration File (plain text)
 
 ```
 <RealmName>
