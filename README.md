@@ -1,8 +1,14 @@
-# The Citadel System
+<p align="center">
+  <img src="logo.png" alt="The Citadel System" width="220"/>
+</p>
 
-**Operating Systems Project : Year 2025/2026**
-**La Salle Universitat Ramon Llull**
-**Authors:** Anas TAGUI | Abderrahmen MESKINE
+<h1 align="center">The Citadel System</h1>
+
+<p align="center">
+  <strong>Operating Systems Project : Year 2025/2026</strong><br/>
+  <strong>La Salle Universitat Ramon Llull</strong><br/>
+  <strong>Authors:</strong> Anas TAGUI | Abderrahmen MESKINE
+</p>
 
 ---
 
@@ -19,6 +25,7 @@ Each Maester process acts as the local agent of a realm  reading its configurati
 ```
 OS_Project_citadel/
 ├── README.md
+├── logo.png
 └── Phase1/
     ├── Phase1_Design_Report.pdf         # Full design and implementation report
     └── Files/
